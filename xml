@@ -10,7 +10,6 @@ for archive in archives:
         with zipfile.ZipFile(archive_path, 'r') as zf:
             for file_name in zf.namelist():
                 if file_name.endswith('.xml'):
-                    os.
                     file_path = zf.open(file_name, 'r').read()
                     root = ET.fromstring(file_path)
                     elem = root.find('filename')
